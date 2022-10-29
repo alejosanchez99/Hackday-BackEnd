@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atom.Socket", "Atom.Socket\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atom.Entities", "Atom.Entities\Atom.Entities.csproj", "{80F76C8A-D7F1-447E-AFFB-CBD97E9DF298}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prueba", "prueba\prueba.csproj", "{76212FE9-FF45-434E-A78E-160A00BBEA18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{80F76C8A-D7F1-447E-AFFB-CBD97E9DF298}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80F76C8A-D7F1-447E-AFFB-CBD97E9DF298}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80F76C8A-D7F1-447E-AFFB-CBD97E9DF298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76212FE9-FF45-434E-A78E-160A00BBEA18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76212FE9-FF45-434E-A78E-160A00BBEA18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76212FE9-FF45-434E-A78E-160A00BBEA18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76212FE9-FF45-434E-A78E-160A00BBEA18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
