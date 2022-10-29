@@ -45,7 +45,7 @@
 
         private List<Metric> AdaptEventMatrics(Event events)
         {
-            return (from eventInfo in events.detail.eventBody.data.metrics
+            return (from eventInfo in events.detail.Event.FirstOrDefault().detail.eventBody.data.metrics
                     select new Metric
                     {
                         count = eventInfo.count,
@@ -58,7 +58,8 @@
 
         private List<User> AdaptEventUsers(Event events)
         {
-            return (from eventInfo in events.detail.eventBody.service.users
+            return (from eventInfo in events.detail.Event.FirstOrDefault().detail.eventBody.service.users
+
                     select new User
                     {
                         id = eventInfo.id,
