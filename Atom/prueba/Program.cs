@@ -22,7 +22,7 @@ string url2 = "https://mqjl9s6vf4.execute-api.eu-west-1.amazonaws.com/prod/v1/ha
 try
 {
     //bool task = await api.InvokeIntegrationAsync(requestUser, url);
-    var x = await api.InvokeIntegrationAsync<Request>(url2);
+    //var x = await api.InvokeIntegrationAsync<>(url2);
 }
 catch (Exception)
 {

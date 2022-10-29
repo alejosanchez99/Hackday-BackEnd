@@ -26,13 +26,13 @@
         /// <param name="nameListener">Objeto actualizaco de tareas programadas</param>
         /// <returns>Request Completed cuando la accion en Status200OK</returns>
         [HttpPost("{nameListener}")]
-        public async Task<IActionResult> PostAsync(string nameListener, [FromBody] RequestMetric requestMetric)
+        public async Task<IActionResult> PostAsync(string nameListener, [FromBody] Metric metric)
         {
             IActionResult actionResult;
 
             try
             {
-                await this.metricHub.Clients.All.SendAsync(nameListener, new MetricHub { Metrics = requestMetric.Metrics });
+                await this.metricHub.Clients.All.SendAsync(nameListener, new MetricHub { Metric = metric });
 
                 actionResult = this.Ok(new { Message = "Request Completed" });
             }

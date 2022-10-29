@@ -35,13 +35,13 @@
         /// <param name="nameListener">Objeto actualizaco de tareas programadas</param>
         /// <returns>Request Completed cuando la accion en Status200OK</returns>
         [HttpPost("{nameListener}")]
-        public async Task<IActionResult> PostAsync(string nameListener, [FromBody] RequestUser requestUser)
+        public async Task<IActionResult> PostAsync(string nameListener, [FromBody] List<User> users)
         {
             IActionResult actionResult;
 
             try
             {
-                await this.userHub.Clients.All.SendAsync(nameListener, requestUser.Users);
+                await this.userHub.Clients.All.SendAsync(nameListener, new UserHub { Users = users  });
 
                 actionResult = this.Ok(new { Message = "Request Completed" });
             }
