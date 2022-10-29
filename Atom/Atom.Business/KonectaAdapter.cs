@@ -45,14 +45,14 @@
 
         private List<Metric> AdaptEventMatrics(Event events)
         {
-            return (from eventInfo in events.detail.Event.FirstOrDefault().detail.eventBody.data.metrics
+            return (from eventInfo in events.detail.Event[1].detail.eventBody.data.metrics
                     select new Metric
                     {
-                        count = eventInfo.count,
-                        title = eventInfo.title,
-                        max = eventInfo.max,
-                        min = eventInfo.min,
-                        sum = eventInfo.sum
+                        count = eventInfo.stats.count,
+                        title = eventInfo.metric,
+                        max = eventInfo.stats.max,
+                        min = eventInfo.stats.min,
+                        sum = eventInfo.stats.sum
                     }).ToList();
         }
 

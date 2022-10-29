@@ -13,7 +13,7 @@
 
     public class Data
     {
-        public List<Metric> metrics { get; set; }
+        public List<MetricRequest> metrics { get; set; }
     }
 
     public class Detail
@@ -61,5 +61,11 @@
         public int sum { get; set; }
         public int? min { get; set; }
         public int? max { get; set; }
+    }
+
+    public class MetricRequest
+    {
+        public string metric { get; set; }
+        public Stats stats { get; set; }
     }
 }
