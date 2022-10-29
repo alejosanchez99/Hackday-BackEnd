@@ -32,14 +32,14 @@
 
             List<Metric> metrics = AdaptEventMatrics(events);
 
+            List<User> users = AdaptEventUsers(events);
+            await api.InvokeIntegrationAsync(users, apiUrlUsers);
+
             foreach (Metric metric in metrics)
             {
                 string urlMetrics = string.Format(apiUrlMetric, metric.title);
                 await api.InvokeIntegrationAsync(metric, urlMetrics);
             }
-
-            List<User> users = AdaptEventUsers(events);
-            await api.InvokeIntegrationAsync(users, apiUrlUsers);
         }
 
 
