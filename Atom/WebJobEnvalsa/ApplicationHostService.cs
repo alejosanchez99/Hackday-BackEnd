@@ -6,6 +6,7 @@ namespace WebJobAtom
     using System;
     using System.Threading;
     using System.Threading.Tasks;
+    using Atom.Business;
     using Microsoft.Extensions.Hosting;
 
     /// <summary>
@@ -24,7 +25,7 @@ namespace WebJobAtom
         /// </summary>
         /// <param name="customLogger">Contiene el log personalizado.</param>
         /// <param name="applicationLifetime">Contiene la vida de la aplicación.</param>
-        public ApplicationHostService( IApplicationLifetime applicationLifetime)
+        public ApplicationHostService(IApplicationLifetime applicationLifetime)
         {
             this.applicationLifetime = applicationLifetime;
         }
@@ -39,11 +40,16 @@ namespace WebJobAtom
             try
             {
                 string oe = "";
+
+                KonectaAdapter konectaAdapter = new KonectaAdapter();
+
+                konectaAdapter.Processs();
+
                 //await this.appProcessService.RunScheduledTaskAsync();
             }
             finally
             {
-                this.applicationLifetime.StopApplication();
+                applicationLifetime.StopApplication();
             }
         }
 

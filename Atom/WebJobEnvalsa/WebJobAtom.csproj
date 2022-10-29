@@ -38,4 +38,7 @@
   <ItemGroup>
     <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Atom.Business\Atom.Business.csproj" />
+  </ItemGroup>
 </Project>

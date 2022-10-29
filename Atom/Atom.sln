@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atom.Socket", "Atom.Socket\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atom.Entities", "Atom.Entities\Atom.Entities.csproj", "{80F76C8A-D7F1-447E-AFFB-CBD97E9DF298}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prueba", "prueba\prueba.csproj", "{76212FE9-FF45-434E-A78E-160A00BBEA18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "prueba", "prueba\prueba.csproj", "{76212FE9-FF45-434E-A78E-160A00BBEA18}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebJobAtom", "WebJobEnvalsa\WebJobAtom.csproj", "{88757D6A-22D0-41C0-A61F-6C2DA8E1A3C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atom.Business", "Atom.Business\Atom.Business.csproj", "{427C21CD-DE8B-4AD3-8F20-549468ACEA83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{88757D6A-22D0-41C0-A61F-6C2DA8E1A3C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88757D6A-22D0-41C0-A61F-6C2DA8E1A3C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88757D6A-22D0-41C0-A61F-6C2DA8E1A3C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{427C21CD-DE8B-4AD3-8F20-549468ACEA83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{427C21CD-DE8B-4AD3-8F20-549468ACEA83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{427C21CD-DE8B-4AD3-8F20-549468ACEA83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{427C21CD-DE8B-4AD3-8F20-549468ACEA83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
