@@ -5,6 +5,6 @@
 
     public class MetricHub : Hub
     {
-        public List<Metric> Metrics { get; set; }
+        public Metric Metric { get; set; }
     }
 }

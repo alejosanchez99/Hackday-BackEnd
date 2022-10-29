@@ -8,7 +8,6 @@ namespace Atom.Entities
 {
     public class RequestMetric
     {
-        public string NameListener { get; set; }
-        public List<Metric> Metrics { get; set; }
+        public Metric Metric { get; set; }
     }
 }
