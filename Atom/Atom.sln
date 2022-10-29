@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atom.Api", "Atom.Api\Atom.Api.csproj", "{83D2441B-A2EF-4CED-BA02-86508B66531A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atom.Socket", "Atom.Socket\Atom.Socket.csproj", "{46ED0855-FE1B-4D46-A47E-FE24CC110F13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83D2441B-A2EF-4CED-BA02-86508B66531A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83D2441B-A2EF-4CED-BA02-86508B66531A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83D2441B-A2EF-4CED-BA02-86508B66531A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83D2441B-A2EF-4CED-BA02-86508B66531A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46ED0855-FE1B-4D46-A47E-FE24CC110F13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46ED0855-FE1B-4D46-A47E-FE24CC110F13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46ED0855-FE1B-4D46-A47E-FE24CC110F13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46ED0855-FE1B-4D46-A47E-FE24CC110F13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BB68688-F2A4-4010-8935-CDF71F745A19}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "g5QcooRBEB2aZ4ZuzhJF4Z4KxqNWg3g5yFfk1p7larifwRJlZ19SBc+S2b8UDVDrAsgyrw9vGJYIVLxOkjbnWw==",
+  "success": true,
+  "projectFilePath": "D:\\Atom\\Atom\\Atom.Api\\Atom.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\diego.correa\\.nuget\\packages\\microsoft.applicationinsights\\2.21.0\\microsoft.applicationinsights.2.21.0.nupkg.sha512",
+    "C:\\Users\\diego.correa\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
