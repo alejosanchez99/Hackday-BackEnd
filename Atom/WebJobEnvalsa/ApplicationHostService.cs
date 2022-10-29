@@ -39,8 +39,6 @@ namespace WebJobAtom
         {
             try
             {
-                string oe = "";
-
                 KonectaAdapter konectaAdapter = new KonectaAdapter();
 
                 konectaAdapter.Processs();

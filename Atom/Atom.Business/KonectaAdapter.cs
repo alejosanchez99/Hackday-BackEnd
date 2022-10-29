@@ -24,7 +24,7 @@
 
             foreach (Metric metric in metrics)
             {
-                string urlMetrics = string.Format(apiUrlMetric, metric.metric);
+                string urlMetrics = string.Format(apiUrlMetric, metric.title);
                 await api.InvokeIntegrationAsync(metric, urlMetrics);
             }
 
@@ -39,7 +39,7 @@
                     select new Metric
                     {
                         count = eventInfo.count,
-                        metric = eventInfo.metric,
+                        title = eventInfo.title,
                         max = eventInfo.max,
                         min = eventInfo.min,
                         sum = eventInfo.sum
