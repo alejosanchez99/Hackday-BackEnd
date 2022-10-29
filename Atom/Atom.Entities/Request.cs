@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
-
-namespace Atom.Entities
+﻿namespace Atom.Entities
 {
+    using System.Collections.Generic;
+    using System.Text.Json.Serialization;
+
     public class OnCreateHackathonEvents
     {
         public string id { get; set; }
         public string createdAt { get; set; }
-        [JsonProperty("event")]
-        public Event Event { get; set; }
+        [JsonPropertyName("event")]
+        public string Event { get; set; }
     }
 
     public class Data
@@ -22,8 +18,11 @@ namespace Atom.Entities
 
     public class Detail
     {
+        [JsonPropertyName("events")]
+        public List<Event> Event { get; set; }
         public string topicName { get; set; }
         public string version { get; set; }
+        [JsonPropertyName("eventBody")]
         public EventBody eventBody { get; set; }
     }
 
@@ -38,13 +37,13 @@ namespace Atom.Entities
         public string version { get; set; }
         public string id { get; set; }
 
-        [JsonProperty("detail-type")]
+        [JsonPropertyName("detail-type")]
         public string DetailType { get; set; }
         public string source { get; set; }
         public string account { get; set; }
-        public int time { get; set; }
         public string region { get; set; }
         public List<object> resources { get; set; }
+        [JsonPropertyName("detail")]
         public Detail detail { get; set; }
     }
 

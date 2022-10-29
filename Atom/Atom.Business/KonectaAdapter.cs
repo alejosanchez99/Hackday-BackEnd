@@ -1,6 +1,8 @@
 ﻿namespace Atom.Business
 {
+    using System.Text.Json;
     using Atom.Entities;
+    using Newtonsoft.Json.Linq;
 
     public class KonectaAdapter
     {
@@ -9,16 +11,24 @@
         private string apiUrlMetric = "https://sockethackday.azurewebsites.net/api/metrichub/{0}";
 
 
-        private async Task<OnCreateHackathonEvents> GetDataAsync(Api api)
+        private Event GetDataAsync(Api api)
         {
-            return await api.InvokeIntegrationAsync<OnCreateHackathonEvents>(konectaUrl);
+            string responseText = api.InvokeIntegrationAsync<OnCreateHackathonEvents>(konectaUrl).Result;
+
+            JObject json = JObject.Parse(responseText);
+
+            JToken? entity = json["payload"]["data"]["onCreateHackathonEvents"];
+
+            OnCreateHackathonEvents? res = JsonSerializer.Deserialize<OnCreateHackathonEvents>(entity.ToString());
+
+            return JsonSerializer.Deserialize<Event>(res.Event);
         }
 
         public async void Processs()
         {
             Api api = new Api();
 
-            OnCreateHackathonEvents events = GetDataAsync(api).Result;
+            Event events = GetDataAsync(api);
 
             List<Metric> metrics = AdaptEventMatrics(events);
 
@@ -33,9 +43,9 @@
         }
 
 
-        private List<Metric> AdaptEventMatrics(OnCreateHackathonEvents events)
+        private List<Metric> AdaptEventMatrics(Event events)
         {
-            return (from eventInfo in events.Event.detail.eventBody.data.metrics
+            return (from eventInfo in events.detail.eventBody.data.metrics
                     select new Metric
                     {
                         count = eventInfo.count,
@@ -46,9 +56,9 @@
                     }).ToList();
         }
 
-        private List<User> AdaptEventUsers(OnCreateHackathonEvents events)
+        private List<User> AdaptEventUsers(Event events)
         {
-            return (from eventInfo in events.Event.detail.eventBody.service.users
+            return (from eventInfo in events.detail.eventBody.service.users
                     select new User
                     {
                         id = eventInfo.id,

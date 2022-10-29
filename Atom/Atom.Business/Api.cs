@@ -32,22 +32,19 @@
         /// </summary>
         /// <typeparam name="TR">Tipo de Objeto de Retorno</typeparam>
         /// <returns>Retorna el objeto de retorno de la respuesta de la api</returns>
-        public async Task<TR> InvokeIntegrationAsync<TR>(string url)
-            where TR : class, new()
+        public async Task<string> InvokeIntegrationAsync<TR>(string url)
         {
-            TR objResponseApi = null;
+            string responseText = string.Empty;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
             using (HttpClient httpCliente = new HttpClient())
             {
                 HttpResponseMessage response = await httpCliente.GetAsync(url).ConfigureAwait(false);
 
-                string y = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-
-                objResponseApi = JsonConvert.DeserializeObject<TR>(y);
+                responseText = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
             }
 
-            return objResponseApi;
+            return responseText;
         }
     }
 }
