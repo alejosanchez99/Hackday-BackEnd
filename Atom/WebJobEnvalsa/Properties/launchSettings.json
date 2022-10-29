@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WebJobEnvalsa": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "Environment": "Development"
+      }
+    }
+  }
+}

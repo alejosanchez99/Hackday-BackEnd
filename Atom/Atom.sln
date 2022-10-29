@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atom.Entities", "Atom.Entit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prueba", "prueba\prueba.csproj", "{76212FE9-FF45-434E-A78E-160A00BBEA18}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebJobAtom", "WebJobEnvalsa\WebJobAtom.csproj", "{88757D6A-22D0-41C0-A61F-6C2DA8E1A3C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{76212FE9-FF45-434E-A78E-160A00BBEA18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76212FE9-FF45-434E-A78E-160A00BBEA18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76212FE9-FF45-434E-A78E-160A00BBEA18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88757D6A-22D0-41C0-A61F-6C2DA8E1A3C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88757D6A-22D0-41C0-A61F-6C2DA8E1A3C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88757D6A-22D0-41C0-A61F-6C2DA8E1A3C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88757D6A-22D0-41C0-A61F-6C2DA8E1A3C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
