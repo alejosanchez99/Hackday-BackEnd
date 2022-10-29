@@ -60,6 +60,7 @@
             {
                 endpoints.MapControllers();
                 endpoints.MapHub<UserHub>("/hubs/user");
+                endpoints.MapHub<MetricHub>("/hubs/metric");
 
                 endpoints.MapHealthChecks("/healh", new HealthCheckOptions
                 {

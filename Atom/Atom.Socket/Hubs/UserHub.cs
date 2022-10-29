@@ -1,9 +1,10 @@
 ﻿namespace Atom.Socket.Hubs
 {
+    using Atom.Entities;
     using Microsoft.AspNetCore.SignalR;
 
     public class UserHub : Hub
     {
-        public string Name { get; set; }
+        public List<User> Users { get; set; }
     }
 }

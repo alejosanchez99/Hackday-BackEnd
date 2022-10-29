@@ -8,24 +8,15 @@
 
     [Route("api/[controller]")]
     [ApiController]
-    public class UserHubController : ControllerBase
+    public class MetricHubController : ControllerBase
     {
+        private readonly IHubContext<MetricHub> metricHub;
 
-        /// <summary>
-        /// Contiene el hub de la notificación. 
-        /// </summary>
-        private readonly IHubContext<UserHub> userHub;
+        private readonly ILogger<MetricHubController> logger;
 
-        private readonly ILogger<UserHubController> logger;
-
-        /// <summary>
-        /// Constructor que realiza la inyección.
-        /// </summary>
-        /// <param name="userHub">Contiene la notificación.</param>
-        /// <param name="logger">Contiene el log.</param>
-        public UserHubController(IHubContext<UserHub> userHub, ILogger<UserHubController> logger)
+        public MetricHubController(IHubContext<MetricHub> metricHub, ILogger<MetricHubController> logger)
         {
-            this.userHub = userHub;
+            this.metricHub = metricHub;
             this.logger = logger;
         }
 
@@ -35,13 +26,13 @@
         /// <param name="nameListener">Objeto actualizaco de tareas programadas</param>
         /// <returns>Request Completed cuando la accion en Status200OK</returns>
         [HttpPost("{nameListener}")]
-        public async Task<IActionResult> PostAsync(string nameListener, [FromBody] RequestUser requestUser)
+        public async Task<IActionResult> PostAsync(string nameListener, [FromBody] RequestMetric requestMetric)
         {
             IActionResult actionResult;
 
             try
             {
-                await this.userHub.Clients.All.SendAsync(nameListener, requestUser.Users);
+                await this.metricHub.Clients.All.SendAsync(nameListener, new MetricHub { Metrics = requestMetric.Metrics });
 
                 actionResult = this.Ok(new { Message = "Request Completed" });
             }

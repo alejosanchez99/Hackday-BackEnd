@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atom.Api", "Atom.Api\Atom.Api.csproj", "{83D2441B-A2EF-4CED-BA02-86508B66531A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atom.Api", "Atom.Api\Atom.Api.csproj", "{83D2441B-A2EF-4CED-BA02-86508B66531A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atom.Socket", "Atom.Socket\Atom.Socket.csproj", "{46ED0855-FE1B-4D46-A47E-FE24CC110F13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atom.Socket", "Atom.Socket\Atom.Socket.csproj", "{46ED0855-FE1B-4D46-A47E-FE24CC110F13}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atom.Entities", "Atom.Entities\Atom.Entities.csproj", "{80F76C8A-D7F1-447E-AFFB-CBD97E9DF298}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{46ED0855-FE1B-4D46-A47E-FE24CC110F13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46ED0855-FE1B-4D46-A47E-FE24CC110F13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46ED0855-FE1B-4D46-A47E-FE24CC110F13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80F76C8A-D7F1-447E-AFFB-CBD97E9DF298}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80F76C8A-D7F1-447E-AFFB-CBD97E9DF298}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80F76C8A-D7F1-447E-AFFB-CBD97E9DF298}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80F76C8A-D7F1-447E-AFFB-CBD97E9DF298}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
